@@ -14,16 +14,15 @@ const images = [
 ];
 
 const gallery = document.querySelector(`.gallery`);
-const picture = document.querySelector(`.picture`);
 gallery.style.display = `flex`;
 gallery.style.justifyContent = `space-between`;
 gallery.style.backgroundColor = `gray`;
 gallery.style.padding = `20px`;
 gallery.style.borderRadius = `15px`;
 
-images.forEach(image => {
+images.map(image => {
   gallery.insertAdjacentHTML(
     'beforeend',
-    `<img src="${image.url}" alt="${image.alt}" class="picture" style = "width:30vw">`,
+    `<img src="${image.url}" alt="${image.alt}" style = "width:30vw">`,
   );
 });
